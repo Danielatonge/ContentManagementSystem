@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Header files -->
-<?php include "includes/admin_header.php";    ?>
+<!-- Header files -->
+<?php include "includes/admin_header.php"; ?>
 <body>
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Navigation -->
-        <?php include "includes/admin_navigation.php";    ?>
+    <!-- Navigation -->
+    <?php include "includes/admin_navigation.php"; ?>
 
-        <div id="page-wrapper">
+    <div id="page-wrapper">
 
-            <div class="container-fluid">
+        <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                       
-                        <h1 class="page-header">
-                            All Posts
-                            <small>User</small>
-                        </h1>            
-                    <?php             
-                       if(isset($_GET['source'])) {
-                       $source = $_GET['source'];
-                        } 
-                        else {
-                           $source = '';
-                       }
-                        
-                         switch($source){
-                             case 'add_posts':
-                                 include "includes/add_posts.php";
-                                 break;
-                             case 'edit_post':
-                                include "includes/edit_post.php";
-                                 break;
-                             default:
-                                 include "includes/view_all_posts.php";
-                                 break;
-                                 
-                                 
-                         }  
-                       
-                       
-                        ?>
-                       
-                       
-                    </div>
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h1 class="page-header">
+                        All Posts
+                        <small>User</small>
+                    </h1>
+                    <?php
+                    if (isset($_GET['source'])) {
+                        $source = $_GET['source'];
+                    } else {
+                        $source = '';
+                    }
+
+                    switch ($source) {
+                        case 'add_posts':
+                            include "includes/add_posts.php";
+                            break;
+                        case 'edit_post':
+                            include "includes/edit_post.php";
+                            break;
+                        default:
+                            include "includes/view_all_posts.php";
+                            break;
+
+
+                    }
+
+
+                    ?>
+
+
                 </div>
-                <!-- /.row -->
-
             </div>
-            <!-- /.container-fluid -->
+            <!-- /.row -->
 
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /.container-fluid -->
 
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-wrapper -->
 
-<?php 
-    
-    include "includes/footer.php";
-    
-    ?>
-    
-    
+</div>
+<!-- /#wrapper -->
+
+<?php
+
+include "includes/footer.php";
+
+?>
+
 
 </body>
 
